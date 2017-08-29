@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> Add Page </title>
+		</head>
+		<body>
+			<h1> Add a Trip </h1>
+			<form action="add_trip" method="post">
+			{% csrf_token %}
+				<label for="destination"> Destination :</label><input type="text" name="destination">
+				<label for="description"> Description :</label><input type="text" name="description">
+				<label for="start"> Travel Date From :</label><input type="text" name="start">
+				<label for="end"> Travel Date End :</label><input type="text" name="end">
+				<input type="submit" value="Add">
+			</form>
+			<a href="logout" method="post"> <button> Logout </button></a>
+
+		</body>
+	</html>

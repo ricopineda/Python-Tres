@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> Destination Page </title>
+		</head>
+		<body>
+		
+			<h1> {{ place.destination }} </h1>
+			<h3> Planned By: {{ place.creator.name }} </h3>
+			<h3> Description: {{ place.description }} </h3>
+			<h3> Travel Date From: {{ place.travel_start }} </h3>
+			<h3> Travel Date To: {{ place.travel_end }} </h3>
+			
+
+			<h1> Other Users Joining This Trip </h1>
+			{% for item in others%}
+			<h3> {{ item.name }} </h3>
+			{% endfor %}
+			<a href="/home"> <button> Home </button></a>
+			<a href="logout"> <button> Logout </button></a>
+		</body>
+	</html>
